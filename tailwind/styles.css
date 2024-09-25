@@ -1,0 +1,14 @@
+@font-face {
+    font-family: 'redditSans';
+    src: url(fonts/RedditSansCondensed-VariableFont_wght.ttf);
+}
+body{
+    background: #85a7c2;
+    font-family: 'redditSans';
+}
+
+
+
+
+
+

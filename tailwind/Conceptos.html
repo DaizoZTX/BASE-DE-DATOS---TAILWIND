@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conceptos</title>
+    <!-- Links a Tailwinds -->
+    <link rel="stylesheet" href="output.css">
+    <!-- Links a AOS -->
+    <link rel="stylesheet" href="aos-master/dist/aos.css">
+    <script src="aos-master/dist/aos.js"></script>
+    <!-- Links a nativos de css y js -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="Icons/BD.png">
+</head>
+<body>
+    <!-- Barra de navegacion!! -->
+    <nav class="bg-gray-800">
+        <div class="px-2 sm:px-6 lg:px-8">
+            <div class="relative flex h-16 items-center justify-between">
+                <!-- Buton para pantallas pequeñas -->
+                <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+                    <button id="botonMenu" type="button" class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="mobile-menu" aria-expanded="false">
+                        <span class="absolute -inset-0.5"></span>
+                        <span class="sr-only">menu</span>
+                        <!--  -->
+                        <svg class="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                        </svg>
+                        <!--  -->
+                        <svg class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+    
+                <!-- Contenedor para titulo y logo -->
+                <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+                    <!-- Logo! -->  
+                    <div class="flex flex-shrink-0 items-center">
+                        <img class="h-8 w-auto" src="Icons/BD.png" alt="BD">
+                        <a href="Index.html" class="text-gray-300 font-bold px-4 bg-gray-600 ml-3 rounded-lg">BASES DE DATOS</a>
+                    </div>
+                    <!-- Enlaces! -->
+                    <div class="hidden sm:ml-6 sm:block">
+                        <div class="flex space-x-4">
+                            <!-- Enlace 1: Conceptos -->
+                            <a href="Conceptos.html" class="rounded-md px-3 py-2 text-sm font-bold text-gray-300 transition ease-in-out hover:bg-gray-700 hover:text-white duration-200">Conceptos</a>
+                            <!-- Enlace 2: Atributos y Tipos -->
+                            <a href="Atributos.html" class="rounded-md px-3 py-2 text-sm font-bold text-gray-300 ease-in-out hover:bg-gray-700 hover:text-white duration-200">Atributos y Tipos</a>
+                            <!-- Enlace 3: Cardinalidad -->
+                            <a href="Cardinalidad.html" class="rounded-md px-3 py-2 text-sm font-bold text-gray-300 ease-in-out hover:bg-gray-700 hover:text-white duration-200">Cardinalidad</a>
+                            <!-- Enlace 4: Normalizacion y Teoria de conjuntos -->
+                            <a href="NormalizacionConjuntos.html" class="rounded-md px-3 py-2 text-sm font-bold text-gray-300 ease-in-out hover:bg-gray-700 hover:text-white duration-200">Normalizacion</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+          
+        <!-- Menu en pantallas pequeñas -->
+        <div class="hidden" id="MenuPant">
+            <div class="space-y-1 px-2 pb-3 pt-2">
+                <!-- Enlace movil 1: Conceptos  -->
+                <a href="Conceptos.html" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 text-center ease-in-out hover:bg-gray-700 hover:text-white duration-200">Conceptos</a>
+                <!-- Enlace movil 2: Atributos y tipos -->
+                <a href="Atributos.html" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 text-center ease-in-out hover:bg-gray-700 hover:text-white duration-200">Atributos y Tipos</a>
+                <!-- Enlace movil 3: Cardinalidad -->
+                <a href="Cardinalidad.html" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 text-center ease-in-out hover:bg-gray-700 hover:text-white duration-200">Cardinalidad</a>
+                <!-- Enlace movil 4: Normalizacion y Teoria de conjuntos -->
+                <a href="NormalizacionConjuntos.html" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 text-center ease-in-out hover:bg-gray-700 hover:text-white duration-200">Normalizacion</a>
+            </div>
+        </div>
+    </nav>
+    <!-- Contenidos -->
+    <!-- CONTENIDO GENERAL -->
+    <div class="mx-3 my-3">
+
+        <!-- Contenido 1: PrimaryKey -->
+        <div class="bg-blue-200 rounded-lg shadow-xl shadow-gray-600 p-5 lg:grid lg:grid-cols-2 lg:gap-4">
+            <div>
+                <div class="flex">
+                    <img src="img/3fa111197f6aee0add60c05829d0f196-icono-de-signo-de-exclamacion.webp" alt="quees" width="40px" class="animate-bounce">
+                    <h2 class="font-bold text-3xl ml-2">1. Primary Key</h2>
+                </div>
+                <p class="pt-3 font-bold text-xl">
+                    En el diseño de bases de datos relacionales, se llama clave primaria, llave primaria o clave principal a un campo o a una combinación de campos que identifica de forma única a cada fila de una tabla. Una clave primaria comprende de esta manera una columna o conjunto de columnas. No puede haber dos filas en una tabla que tengan la misma clave primaria.
+                </p>
+            </div>
+            <div class="pt-4 lg:pl-5">
+                <img src="img/loBasico/tabla_base_datos.webp" alt="primaryKey" class="rounded-lg shadow-md shadow-gray-600 mb-5" data-aos="zoom-in-up">
+            </div>
+        </div>
+
+        <!-- Contenido 2: ForeingKey-->
+        <div class="bg-blue-200 rounded-lg shadow-xl shadow-gray-600 p-5 mt-5 lg:grid lg:grid-cols-2 lg:gap-4">
+            <div>
+                <div class="flex">
+                    <img src="img/3fa111197f6aee0add60c05829d0f196-icono-de-signo-de-exclamacion.webp" alt="importanciaico" width="40px" class="animate-bounce">
+                    <h2 class="font-bold text-3xl ml-2">2. Foreing Key</h2>
+                </div>
+                <p class="pt-3 font-bold text-xl">
+                    Una clave foránea o llave foránea o clave ajena es una limitación referencial entre dos tablas. La clave foránea identifica una columna o grupo de columnas en una tabla que se refiere a una columna o grupo de columnas en otra tabla.
+                </p>
+            </div>
+            <div class="pt-4 lg:pl-5 lg:flex lg:justify-center lg:items-center">
+                <img src="img/loBasico/foreingKey.png" alt="QueEs" class="rounded-lg mb-5" data-aos="zoom-in-up">
+            </div>
+        </div>
+
+        <!-- Contenido 3: Candidate Key-->
+        <div class="bg-blue-200 rounded-lg shadow-xl shadow-gray-600 p-5 mt-5 lg:grid lg:grid-cols-2 lg:gap-4">
+            <div>
+                <div class="flex">
+                    <img src="img/3fa111197f6aee0add60c05829d0f196-icono-de-signo-de-exclamacion.webp" alt="importanciaico" width="40px" class="animate-bounce">
+                    <h2 class="font-bold text-3xl ml-2">3. Candidate Key</h2>
+                </div>
+                <p class="pt-3 font-bold text-xl">
+                    En el modelo relacional de bases de datos, una llave candidata de una relación es una mínima súper llave de esa relación; es decir, un conjunto de atributos tales que: La relación no tiene dos distintas tuplas con los mismos valores para estos atributos.
+                </p>
+            </div>
+            <div class="pt-4 lg:pl-5 lg:flex lg:justify-center lg:items-center">
+                <img src="img/loBasico/Claves_candidatas.png" alt="QueEs" class="rounded-lg shadow-md shadow-gray-600 mb-5" data-aos="zoom-in-up">
+            </div>
+        </div>
+
+        <!-- Contenido 4: Entidad-->
+        <div class="bg-blue-200 rounded-lg shadow-xl shadow-gray-600 p-5 mt-5 lg:grid lg:grid-cols-2 lg:gap-4">
+            <div>
+                <div class="flex">
+                    <img src="img/3fa111197f6aee0add60c05829d0f196-icono-de-signo-de-exclamacion.webp" alt="importanciaico" width="40px" class="animate-bounce">
+                    <h2 class="font-bold text-3xl ml-2">4. Entidad</h2>
+                </div>
+                <p class="pt-3 font-bold text-xl">
+                    Son las personas, objetos o conceptos de los que trata una base de datos. Por ejemplo, en una base de datos de ventas de un negocio, las entidades podrían ser, entre otras, “Cliente”, “Producto”, “Factura” o “Dirección”.
+                </p>
+            </div>
+            <div class="pt-4 lg:pl-5 lg:flex lg:justify-center lg:items-center">
+                <img src="img/loBasico/entidad.jpg" alt="QueEs" width="300px" class="rounded-lg shadow-md shadow-gray-600 mb-5" data-aos="zoom-in-up">
+            </div>
+        </div>
+
+        <!-- Contenido 5: Relacion-->
+        <div class="bg-blue-200 rounded-lg shadow-xl shadow-gray-600 p-5 mt-5 lg:grid lg:grid-cols-2 lg:gap-4">
+            <div>
+                <div class="flex">
+                    <img src="img/3fa111197f6aee0add60c05829d0f196-icono-de-signo-de-exclamacion.webp" alt="importanciaico" width="40px" class="animate-bounce">
+                    <h2 class="font-bold text-3xl ml-2">5. Relacion</h2>
+                </div>
+                <p class="pt-3 font-bold text-xl">
+                    Es el vínculo que se establece entre distintos elementos de las tablas que la conforman. En este tipo de relaciones es fundamental el uso de los campos de llave primaria (primary key) que son los que se relacionan con otros registros de otras tablas.
+                </p>
+            </div>
+            <div class="pt-4 lg:pl-5 lg:flex lg:justify-center lg:items-center">
+                <img src="img/loBasico/relacion2.jpg" alt="QueEs" width="300px" class="rounded-lg shadow-md shadow-gray-600 mb-5" data-aos="zoom-in-up">
+            </div>
+        </div>
+
+        <!-- Contenido 6: Atributos -->
+        <div class="bg-blue-200 rounded-lg shadow-xl shadow-gray-600 p-5 mt-5 lg:grid lg:grid-cols-2 lg:gap-4">
+            <div>
+                <div class="flex">
+                    <img src="img/3fa111197f6aee0add60c05829d0f196-icono-de-signo-de-exclamacion.webp" alt="importanciaico" width="40px" class="animate-bounce">
+                    <h2 class="font-bold text-3xl ml-2">6. Atributos</h2>
+                </div>
+                <p class="pt-3 font-bold text-xl">
+                    Estos son los valores que describen cada instancia de la entidad y representan la parte principal de los datos almacenados en la base de datos.
+                </p>
+            </div>
+            <div class="pt-4 lg:pl-5 lg:flex lg:justify-center lg:items-center">
+                <img src="img/loBasico/atributos.png" alt="QueEs" class="rounded-lg mb-5" data-aos="zoom-in-up">
+            </div>
+        </div>
+
+        <!-- Contenido 7: Modelo-->
+        <div class="bg-blue-200 rounded-lg shadow-xl shadow-gray-600 p-5 mt-5 lg:grid lg:grid-cols-2 lg:gap-4">
+            <div>
+                <div class="flex">
+                    <img src="img/3fa111197f6aee0add60c05829d0f196-icono-de-signo-de-exclamacion.webp" alt="importanciaico" width="40px" class="animate-bounce">
+                    <h2 class="font-bold text-3xl ml-2">7. Modelo</h2>
+                </div>
+                <p class="pt-3 font-bold text-xl">
+                    Es el vínculo que se establece entre distintos elementos de las tablas que la conforman. En este tipo de relaciones es fundamental el uso de los campos de llave primaria (primary key) que son los que se relacionan con otros registros de otras tablas.
+                </p>
+            </div>
+            <div class="pt-4 lg:pl-5 lg:flex lg:justify-center lg:items-center">
+                <img src="img/loBasico/relacion.png" alt="QueEs" width="300px" class="rounded-lg shadow-md shadow-gray-600 mb-5" data-aos="zoom-in-up">
+            </div>
+        </div>
+
+        <!-- Contenido 8: Campo -->
+        <div class="bg-blue-200 rounded-lg shadow-xl shadow-gray-600 p-5 mt-5 lg:grid lg:grid-cols-2 lg:gap-4">
+            <div>
+                <div class="flex">
+                    <img src="img/3fa111197f6aee0add60c05829d0f196-icono-de-signo-de-exclamacion.webp" alt="importanciaico" width="40px" class="animate-bounce">
+                    <h2 class="font-bold text-3xl ml-2">8. Campo</h2>
+                </div>
+                <p class="pt-3 font-bold text-xl">
+                    Es el nombre de la unidad de información. Cada entrada en una base de datos puede tener múltiples campos de diversos tipos. Por ejemplo, un campo de texto llamado 'color favorito', que permite escribirlo, o un menú llamado 'población' que permita escoger de un listado de poblaciones posibles. La combinación de campos diversos nos permitirá recabar toda la información que consideremos relevante sobre los ítems que constituyen la base de datos.
+                </p>
+            </div>
+            <div class="pt-4 lg:pl-5 lg:flex lg:justify-center lg:items-center">
+                <img src="img/loBasico/campo.jpg" alt="QueEs" class="rounded-lg shadow-md shadow-gray-600 mb-5" data-aos="zoom-in-up">
+            </div>
+        </div>
+
+        <!-- Contenido 9: Registro-->
+        <div class="bg-blue-200 rounded-lg shadow-xl shadow-gray-600 p-5 mt-5 lg:grid lg:grid-cols-2 lg:gap-4">
+            <div>
+                <div class="flex">
+                    <img src="img/3fa111197f6aee0add60c05829d0f196-icono-de-signo-de-exclamacion.webp" alt="importanciaico" width="40px" class="animate-bounce">
+                    <h2 class="font-bold text-3xl ml-2">9. Registro</h2>
+                </div>
+                <p class="pt-3 font-bold text-xl">
+                    es un objeto que puede tener uno o más valores. Luego, los grupos de registros se guardan en una tabla; la tabla determina los datos que puede tener cada registro. Varias tablas contienen varios registros en una base de datos.
+                </p>
+            </div>
+            <div class="pt-4 lg:pl-5 lg:flex lg:justify-center lg:items-center">
+                <img src="img/loBasico/registro.jpg" alt="QueEs" class="rounded-lg shadow-md shadow-gray-600 mb-5" data-aos="zoom-in-up">
+            </div>
+        </div>
+
+        <!-- Contenido 10: Registro-->
+        <div class="bg-blue-200 rounded-lg shadow-xl shadow-gray-600 p-5 mt-5 lg:grid lg:grid-cols-2 lg:gap-4">
+            <div>
+                <div class="flex">
+                    <img src="img/3fa111197f6aee0add60c05829d0f196-icono-de-signo-de-exclamacion.webp" alt="importanciaico" width="40px" class="animate-bounce">
+                    <h2 class="font-bold text-3xl ml-2">10. Tabla</h2>
+                </div>
+                <p class="pt-3 font-bold text-xl">
+                    Las tablas son estructuras lógicas mantenidas por el gestor de bases de datos. Las tablas están formadas por columnas y filas. No hay ningún orden inherente de las filas dentro de una tabla. En la intersección de cada columna con una fila hay un elemento de datos específico denominado valor.
+                </p>
+            </div>
+            <div class="pt-4 lg:pl-5 lg:flex lg:justify-center lg:items-center">
+                <img src="img/loBasico/tabla.jpg" alt="QueEs" width="300px" class="rounded-lg shadow-md shadow-gray-600 mb-5" data-aos="zoom-in-up">
+            </div>
+        </div>
+    </div>
+    
+    <!-- Boton Para subir al top! -->
+    <button id="to-top-button" onclick="goToTop()" class="fixed z-90 bottom-8 right-8 border-0 w-16 h-16 rounded-full drop-shadow-md bg-indigo-500 text-white text-3xl font-bold">
+        &uarr;
+    </button>
+
+    <!-- Inializacion de AOS -->
+    <script>
+        AOS.init();
+    </script>
+
+    <!-- Integracion del script nativo -->
+    <script src="script.js"></script>
+</body>
+</html>

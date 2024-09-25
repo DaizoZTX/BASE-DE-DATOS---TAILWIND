@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BASES DE DATOS</title>
+
+    <!-- Links a Tailwinds -->
+    <!-- RECUERDA EJECUTAR EL COMANDO "npx tailwindcss -i ./tailwind/input.css -o ./tailwind/output.css --watch" EN LA RUTA DEL PROYECTO SIEMPRE QUE VAYAS A CONSTRUIR ALGO  -->
+    <link rel="stylesheet" href="output.css">
+
+    <!-- Links a AOS -->
+    <link rel="stylesheet" href="aos-master/dist/aos.css">
+    <script src="aos-master/dist/aos.js"></script>
+    <!-- Links a nativos de css y js -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="Icons/BD.png">
+</head>
+
+<body>
+    <!-- Barra de navegacion!! -->
+    <nav class="bg-gray-800">
+        <div class="px-2 sm:px-6 lg:px-8">
+            <div class="relative flex h-16 items-center justify-between">
+                <!-- Buton para pantallas pequeñas -->
+                <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+                    <button id="botonMenu" type="button" class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="mobile-menu" aria-expanded="false">
+                        <span class="absolute -inset-0.5"></span>
+                        <span class="sr-only">menu</span>
+                        <!--  -->
+                        <svg class="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                        </svg>
+                        <!--  -->
+                        <svg class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+
+                <!-- Contenedor para titulo y logo -->
+                <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+                  <!-- Logo! -->  
+                    <div class="flex flex-shrink-0 items-center">
+                        <img class="h-8 w-auto" src="Icons/BD.png" alt="BD">
+                        <a href="Index.html" class="text-gray-300 font-bold px-4 bg-gray-600 ml-3 rounded-lg">BASES DE DATOS</a>
+                    </div>
+                    <!-- Enlaces! -->
+                    <div class="hidden sm:ml-6 sm:block">
+                        <div class="flex space-x-4">
+                            <!-- Enlace 1: Conceptos -->
+                            <a href="Conceptos.html" class="rounded-md px-3 py-2 text-sm font-bold text-gray-300 transition ease-in-out hover:bg-gray-700 hover:text-white duration-200">Conceptos</a>
+                            <!-- Enlace 2: Atributos y Tipos -->
+                            <a href="Atributos.html" class="rounded-md px-3 py-2 text-sm font-bold text-gray-300 ease-in-out hover:bg-gray-700 hover:text-white duration-200">Atributos y Tipos</a>
+                            <!-- Enlace 3: Cardinalidad -->
+                            <a href="Cardinalidad.html" class="rounded-md px-3 py-2 text-sm font-bold text-gray-300 ease-in-out hover:bg-gray-700 hover:text-white duration-200">Cardinalidad</a>
+                            <!-- Enlace 4: Normalizacion y Teoria de conjuntos -->
+                            <a href="NormalizacionConjuntos.html" class="rounded-md px-3 py-2 text-sm font-bold text-gray-300 ease-in-out hover:bg-gray-700 hover:text-white duration-200">Normalizacion</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+      
+        <!-- Menu en pantallas pequeñas -->
+        <div class="hidden" id="MenuPant">
+            <div class="space-y-1 px-2 pb-3 pt-2">
+                <!-- Enlace movil 1: Conceptos  -->
+                <a href="Conceptos.html" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 text-center ease-in-out hover:bg-gray-700 hover:text-white duration-200">Conceptos</a>
+                <!-- Enlace movil 2: Atributos y tipos -->
+                <a href="Atributos.html" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 text-center ease-in-out hover:bg-gray-700 hover:text-white duration-200">Atributos y Tipos</a>
+                <!-- Enlace movil 3: Cardinalidad -->
+                <a href="Cardinalidad.html" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 text-center ease-in-out hover:bg-gray-700 hover:text-white duration-200">Cardinalidad</a>
+                <!-- Enlace movil 4: Normalizacion y Teoria de conjuntos -->
+                <a href="NormalizacionConjuntos.html" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 text-center ease-in-out hover:bg-gray-700 hover:text-white duration-200">Normalizacion</a>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- CONTENIDO GENERAL -->
+    <div class="mx-3 my-3">
+        <!-- Contenido 1 -->
+        <div class="bg-blue-200 rounded-lg shadow-xl shadow-gray-600 p-5 lg:grid lg:grid-cols-2 lg:gap-4">
+            <div>
+                <div class="flex">
+                    <img src="img/quesesico.png" alt="quees" width="40px" class="animate-bounce">
+                    <h2 class="font-bold text-3xl ml-2">¿Que es una Base de Datos?</h2>
+                </div>
+                <p class="pt-3 font-bold text-xl">
+                    Una base de datos es una recopilación de datos sistemática y almacenada electrónicamente. Puede contener cualquier tipo de datos, incluidos palabras, números, imágenes, vídeos y archivos. Puede usar un software denominado sistema de administración de bases de datos (DBMS) para almacenar, recuperar y editar datos. En los sistemas informáticos, la palabra base de datos también puede referirse a cualquier DBMS, al sistema de base de datos o a una aplicación asociada con la base de datos.
+                </p>
+            </div>
+            <div class="pt-4 lg:pl-5">
+                <img src="img/queEs.jpg" alt="QueEs" class="rounded-lg shadow-md shadow-gray-600 mb-5" data-aos="zoom-in-up">
+            </div>
+        </div>
+        <!-- Contenido 2 -->
+        <div class="bg-blue-200 rounded-lg shadow-xl shadow-gray-600 p-5 mt-5 lg:grid lg:grid-cols-2 lg:gap-4">
+            <div>
+                <div class="flex">
+                    <img src="img/3fa111197f6aee0add60c05829d0f196-icono-de-signo-de-exclamacion.webp" alt="importanciaico" width="40px" class="animate-bounce">
+                    <h2 class="font-bold text-3xl ml-2">¿Cual es su importancia de las bases de datos?</h2>
+                </div>
+                <p class="pt-3 font-bold text-xl">
+                    Una base de datos de alto rendimiento es crucial para cualquier organización. Las bases de datos sustentan las operaciones internas de las empresas y almacenan las interacciones con clientes y proveedores. Además, albergan información administrativa y datos más especializados, como modelos de ingeniería o económicos. Algunos ejemplos son los sistemas de bibliotecas digitales, los sistemas de reserva de viajes y los sistemas de inventario. A continuación se exponen algunas razones por las que las bases de datos son esenciales.<br><br><strong>Escalado Eficiente</strong><br>Las aplicaciones de bases de datos pueden administrar grandes cantidades de datos, que pueden escalar a millones, miles de millones y más. Es imposible almacenar esta cantidad de datos digitales sin una base de datos.<br><br><strong>Integridad de los datos</strong><br>Las bases de datos con frecuencia tienen reglas y condiciones incorporadas para mantener la coherencia de datos.<br><br>
+                </p>
+            </div>
+            <div class="pt-4 lg:pl-5 lg:flex lg:justify-center lg:items-center">
+                <img src="img/importancia.png" alt="QueEs" class="rounded-lg shadow-md shadow-gray-600 mb-5" data-aos="zoom-in-up">
+            </div>
+        </div>
+        <!-- Contenido 3 -->
+        <div class="bg-blue-200 rounded-lg shadow-xl shadow-gray-600 p-5 mt-5 lg:grid lg:grid-cols-2 lg:gap-4">
+            <div>
+                <div class="flex">
+                    <img src="img/postgreico.png" width="40px" alt="postgre" class="animate-bounce">
+                    <h2 class="font-bold text-3xl ml-2">¿Que es un Gestor?</h2>
+                </div>
+                <p class="pt-3 font-bold text-xl">
+                    Un sistema gestor de bases de datos (SGBD) es un software constituido por una serie de programas dirigidos a crear, gestionar y administrar la información que se encuentra en la base de datos. Su principal objetivo es servir de interfaz entre los usuarios y las aplicaciones para facilitar la organización de los datos, garantizar su accesibilidad, calidad e integridad, brindando a su vez una manera eficaz de administrar esa información.
+                    <br><br>El lenguaje de manipulación, un lenguaje de definición de datos y un lenguaje de consulta son los tres componentes de un gestor de base de datos; por lo que puede trabajar a diferentes niveles, pero es invisible para el usuario final.
+                </p>
+                <button type="button" class="bg-blue-300 p-3 mt-2 font-extrabold rounded-lg shadow-md shadow-gray-600 
+                transition ease-in-out hover:-translate-y-1 hover:scale-110 hover:bg-indigo-400 duration-100" id="botonGestor">Ver gestores de BD!</button>
+            </div>
+            <div class="pt-4 lg:pl-5 lg:flex lg:justify-center lg:items-center">
+                <img src="img/gestores.jpg" alt="QueEs" class="rounded-lg shadow-md shadow-gray-600 mb-5" data-aos="zoom-in-up">
+            </div>
+        </div>
+        <!-- Contenido 4 -->
+        <div class="bg-blue-200 rounded-lg shadow-xl shadow-gray-600 p-5 mt-5 lg:grid lg:grid-cols-2 lg:gap-4">
+            <div>
+                <div class="flex">
+                    <img src="img/oracleico.png" width="40px" alt="oracleico" class="animate-bounce">
+                    <h2 class="font-bold text-3xl ml-2">Tipos de Gestores</h2>
+                </div>
+                <p class="pt-3 font-bold text-xl">
+                    Podemos encontrar muchos tipos de gestores entre ellos podemos encontrar los siguientes: <br><br>
+                    <strong>1. SGBD relacional</strong><br><br>El modelo relacional de los SGBD es el más utilizado en todos los modelos de negocio. Funciona para organizar bases de datos tradicionales o tablas de datos, e interpreta esos datos a través de comandos y consultas de lenguaje estructurado. Los datos en un modelo relacional se pueden leer en relación entre sí, con los diferentes registros y tipos de datos organizados por la herramienta en categorías. En esta categoria entran sistemas como los de Oracle, MySQL, SQLServer o PostgreSQL. <br><br>
+                    <strong>2. SGBD no relacional</strong><br><br>Un gestor no relacional permite interpretar grandes cantidades de datos a la vez, pues su formato flexible deja escalar la base de datos a múltiples servidores, según sea necesario. Este tipo de software puede trabajar con datos en almacenes de documentos, bases de datos de gráficos y almacenes de clave/valor, entre otros formatos. El modelo no relacional ha ido poco a poco ganando popularidad a medida que la administración de big data se vuelve más compleja. En esta categoria entran sistemas como lo son Apache Cassandra, Amazon DynamoDB o Redis.
+                </p>
+            </div>
+            <div class="pt-4 lg:pl-5 lg:flex lg:justify-center lg:items-center">
+                <img src="img/tiposbd.jpg" alt="QueEs" class="rounded-lg shadow-md shadow-gray-600 mb-5" data-aos="zoom-in-up">
+            </div>
+        </div>
+    </div>
+    
+    <!-- Boton Para subir al top! -->
+    <button id="to-top-button" onclick="goToTop()" class="fixed z-90 bottom-8 right-8 border-0 w-16 h-16 rounded-full drop-shadow-md bg-indigo-500 text-white text-3xl font-bold">
+        &uarr;
+    </button>
+
+    <!-- Inializacion de AOS -->
+    <script>
+        AOS.init();
+    </script>
+
+    <!-- Integracion del SweetAlert2 -->
+    <script src="sweetalert2/dist/sweetalert2.all.min.js"></script>
+
+    <!-- Integracion del script nativo -->
+    <script src="script.js"></script>
+</body>
+</html>
